@@ -20,6 +20,8 @@ export const endpoints={
  games:()=>api('/api/admin/games'),
  settings:()=>api('/api/admin/casino-settings'),
  saveSettings:(body)=>api('/api/admin/casino-settings',{method:'PUT',body}),
+ resultMode:(game)=>api(`/api/admin/result-mode/${game}`),
+ saveResultMode:(game,body)=>api(`/api/admin/result-mode/${game}`,{method:'PUT',body}),
  matkaPublish:(body)=>api('/api/admin/games/matka/results',{method:'POST',body}),
  dbHealth:()=>api('/api/admin/database/health')
 };
