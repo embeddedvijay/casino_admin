@@ -14,6 +14,7 @@ export const endpoints={
  summary:()=>api('/api/admin/operations/summary'),
  users:()=>api(`/auth/users?client_id=${encodeURIComponent(CLIENT)}`,{auth:false}),
  updateUser:(id,body)=>api(`/auth/users/${id}?client_id=${encodeURIComponent(CLIENT)}`,{method:'PUT',body,auth:false}),
+ adjustBalance:(id,body)=>api(`/api/admin/users/${encodeURIComponent(id)}/balance-adjustment`,{method:'POST',body}),
  bets:()=>api('/api/admin/bets?limit=100'),
  markets:()=>api('/api/admin/games/matka/markets'),
  saveMarkets:(markets)=>api('/api/admin/games/matka/markets',{method:'PUT',body:{markets}}),
