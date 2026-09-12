@@ -1,0 +1,7 @@
+{
+  "appId":"com.gold365.admin",
+  "appName":"GOLD365 Admin",
+  "webDir":"dist",
+  "server":{"androidScheme":"https","cleartext":true},
+  "android":{"backgroundColor":"#07101a"}
+}
