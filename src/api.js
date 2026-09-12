@@ -19,6 +19,7 @@ export const endpoints={
  saveMarkets:(markets)=>api('/api/admin/games/matka/markets',{method:'PUT',body:{markets}}),
  matkaWinRates:()=>api('/api/admin/games/matka/win-rates'),
  saveMatkaWinRates:(body)=>api('/api/admin/games/matka/win-rates',{method:'PUT',body}),
+ matkaMessages:(marketKey,session)=>api(`/api/admin/matka/messages?market_key=${encodeURIComponent(marketKey)}&session=${session}&limit=500`),
  games:()=>api('/api/admin/games'),
  settings:()=>api('/api/admin/casino-settings'),
  saveSettings:(body)=>api('/api/admin/casino-settings',{method:'PUT',body}),
